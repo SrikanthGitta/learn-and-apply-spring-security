@@ -11,6 +11,7 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
 /**
@@ -31,7 +32,13 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		DaoAuthenticationProvider daoAuthProvider = new DaoAuthenticationProvider();
 		daoAuthProvider.setUserDetailsService(userDetailsService);
-		daoAuthProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+		
+		// No Password Encryption
+		// daoAuthProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+		
+		// Using BCrypt Password Encryption
+		daoAuthProvider.setPasswordEncoder(new BCryptPasswordEncoder());
+		
 		return daoAuthProvider;
 	}
 	
