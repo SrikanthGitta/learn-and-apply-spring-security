@@ -2,8 +2,8 @@
 In this application, you will learn 
 * How to use Spring Boot + Security + OAuth2 token to validate the user account using Google API SSO.
 
-Steps to configure clientId and clientSecret from Google Cloud Platform.
-1. Login / Create an annount in [Google Cloud Platform](https://console.cloud.google.com)
+Steps to configure clientId and clientSecret using Google Cloud Platform.
+1. Login / Create an account in [Google Cloud Platform](https://console.cloud.google.com)
 2. Navigate to APIs & Services -> Credentials -> OAuth consent screen
 3. Enter your Application name (This name will be shown on your Google Login Page)
 4. If you would like to add more Scopes, you can use "Add scope" button.
