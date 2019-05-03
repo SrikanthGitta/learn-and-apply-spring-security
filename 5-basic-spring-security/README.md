@@ -12,3 +12,4 @@ Steps to configure clientId and clientSecret using Google Cloud Platform.
 7. Save your changes.
 8. After changes has been saved, you will get a popup there it will show CLIENT_ID and CLIENT_SECRET
 9. Use those two values in your application.properties files.
+10. If you would like to see the SSO token information, you can use [http://localhost:8080/user](http://localhost:8080/user). It will show the SSO token in JSON format.
