@@ -34,7 +34,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 		daoAuthProvider.setUserDetailsService(userDetailsService);
 		
 		// No Password Encryption
-		// daoAuthProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+		//daoAuthProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
 		
 		// Using BCrypt Password Encryption
 		daoAuthProvider.setPasswordEncoder(new BCryptPasswordEncoder());
